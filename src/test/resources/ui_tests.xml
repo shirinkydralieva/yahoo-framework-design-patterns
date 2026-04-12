@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Yahoo Mail Tests Suite">
+
+  <listeners>
+    <listener class-name="framework.listener.OpenCloseBrowserEachClassListener"/>
+    <listener class-name="framework.listener.ScreenshotOnFailureListener"/>
+  </listeners>
+
+  <test name="Yahoo Mail Test - Smoke" group-by-instances="true">
+
+    <packages>
+      <package name="smoke"/>
+    </packages>
+  </test>
+
+  <test name="Yahoo Mail Test - Regression" group-by-instances="true">
+    <packages>
+      <package name="regression"/>
+    </packages>
+  </test>
+
+</suite>
+
+
+
+
