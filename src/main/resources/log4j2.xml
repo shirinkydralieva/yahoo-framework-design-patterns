@@ -22,18 +22,25 @@
       </Policies>
       <DefaultRolloverStrategy max="30"/>
     </RollingFile>
+
+    <ReportPortalLog4j2Appender name = "ReportPortalAppender">
+      <PatternLayout pattern="${pattern}"/>
+    </ReportPortalLog4j2Appender>
   </Appenders>
 
   <Loggers>
     <Root level="info">
       <AppenderRef ref="ConsoleAppender"/>
       <AppenderRef ref="FileAppender"/>
+      <AppenderRef ref="ReportPortalAppender"/>
     </Root>
 
     <Logger name="driver" level="debug"/>
     <Logger name="listener" level="debug"/>
     <Logger name="pages" level="debug"/>
     <Logger name="service" level="debug"/>
+    <Logger name="rp" level="WARN"/>
+    <Logger name="com.epam.reportportal" level="WARN"/>
 
   </Loggers>
 

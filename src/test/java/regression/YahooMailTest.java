@@ -13,7 +13,7 @@ import pages.MailDialogPage;
 import pages.MailFolderPage;
 import service.LoginService;
 
-@Test
+@Test(groups = {"regression"})
 public class YahooMailTest {
 
   private static final User user = asUserWithSimplePermission();

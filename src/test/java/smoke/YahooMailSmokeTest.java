@@ -11,7 +11,7 @@ import pages.InboxPage;
 import pages.MailDialogPage;
 import service.LoginService;
 
-@Test
+@Test(groups = {"smoke"})
 public class YahooMailSmokeTest {
   private static final User user = asUserWithSimplePermission();
 
