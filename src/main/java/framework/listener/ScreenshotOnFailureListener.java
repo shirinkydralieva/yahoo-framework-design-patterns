@@ -12,7 +12,6 @@ public class ScreenshotOnFailureListener extends ReportPortalTestNGListener {
 
   @Override
   public void onTestFailure(ITestResult result) {
-    super.onTestFailure(result);
     String testName = result.getMethod().getMethodName();
     log.error("Test failed: {}", testName, result.getThrowable());
     String screenshotPath =
@@ -21,7 +20,5 @@ public class ScreenshotOnFailureListener extends ReportPortalTestNGListener {
     File screenshotFile = new File(screenshotPath);
     log.info("Screenshot saved for failed test {}: {}", testName, screenshotFile);
   }
-
-
 
 }
