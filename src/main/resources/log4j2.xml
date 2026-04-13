@@ -29,10 +29,10 @@
   </Appenders>
 
   <Loggers>
-    <Root level="info">
+    <Root level="debug">
       <AppenderRef ref="ConsoleAppender"/>
       <AppenderRef ref="FileAppender"/>
-      <AppenderRef ref="ReportPortalAppender"/>
+      <AppenderRef ref="ReportPortalAppender" level="debug"/>
     </Root>
 
     <Logger name="driver" level="debug"/>
