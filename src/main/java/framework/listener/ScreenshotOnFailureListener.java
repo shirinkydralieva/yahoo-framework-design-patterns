@@ -18,7 +18,7 @@ public class ScreenshotOnFailureListener extends ReportPortalTestNGListener {
         ScreenshotUtil.takeScreenshot
             (WebDriverSingleton.getInstance().getDriver(), testName);
     File screenshotFile = new File(screenshotPath);
-    log.info("Screenshot saved for failed test {}: {}", testName, screenshotFile);
+    log.error("RP_MESSAGE#FILE#{}#{}", screenshotFile.getAbsolutePath(), "Screenshot for " + testName);
   }
 
 }

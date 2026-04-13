@@ -62,6 +62,8 @@
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/ui_tests.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <!--suppress UnresolvedMavenProperty -->
+          <groups>${scope}</groups>
         </configuration>
       </plugin>
     </plugins>
