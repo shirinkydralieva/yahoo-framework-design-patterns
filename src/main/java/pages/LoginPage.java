@@ -2,14 +2,13 @@ package pages;
 
 import framework.ui.AbstractPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 
 public class LoginPage extends AbstractPage {
 
   private static final By EMAIL_INPUT_LOCATOR
       = By.name("username");
-  private static final By NEXT_BUTTON_LOCATOR =
-      By.cssSelector("button[type='submit']");
+  private static final By SIGN_IN_BUTTON =
+      By.id("login-signin");
   private static final By PASSWORD_INPUT_LOCATOR
       = By.name("password");
 
@@ -26,7 +25,7 @@ public class LoginPage extends AbstractPage {
   }
 
   public LoginPage clickNextButton(){
-    element(NEXT_BUTTON_LOCATOR).click();
+    element(SIGN_IN_BUTTON).click();
     return this;
   }
 
