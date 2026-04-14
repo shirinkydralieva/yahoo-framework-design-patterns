@@ -59,4 +59,10 @@ public class LogWebElementDecorator extends WebElementDecorator {
     log.debug("Wait element located {} attribute {} to be {}", locator, attribute, value);
     return super.waitElementAttributeTobe(attribute, value);
   }
+
+  @Override
+  public Boolean waitStalenessOf() {
+    log.debug("Wait staleness of element located {}", locator);
+    return super.waitStalenessOf();
+  }
 }

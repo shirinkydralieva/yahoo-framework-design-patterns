@@ -28,6 +28,7 @@ public class LoginPage extends AbstractPage {
 
   public LoginPage clickNextButton(){
     element(NEXT_BUTTON_LOCATOR).click();
+    element(NEXT_BUTTON_LOCATOR).waitStalenessOf();
     return this;
   }
 

@@ -65,4 +65,8 @@ public class WebElementDecorator {
     return explicitWait.until(ExpectedConditions.attributeToBe(locator, attribute, value));
   }
 
+  public Boolean waitStalenessOf(){
+    return explicitWait.until(ExpectedConditions.stalenessOf(getWrappedWebElement()));
+  }
+
 }
