@@ -60,7 +60,6 @@ public class WebElementDecorator {
 
   public WebElement waitElementToBeClickable() {
     return explicitWait
-        .ignoring(StaleElementReferenceException.class)
         .until(ExpectedConditions.elementToBeClickable(locator));
   }
 

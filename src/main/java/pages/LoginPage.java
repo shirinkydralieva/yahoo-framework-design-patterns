@@ -16,7 +16,6 @@ public class LoginPage extends AbstractPage {
   public LoginPage typeEmail(String email){
     element(EMAIL_INPUT_LOCATOR).click();
     element(EMAIL_INPUT_LOCATOR).type(email);
-    element(EMAIL_INPUT_LOCATOR).sendKeys(Keys.ENTER);
     return this;
   }
 
