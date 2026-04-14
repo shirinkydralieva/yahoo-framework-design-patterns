@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -58,15 +59,13 @@ public class WebElementDecorator {
   }
 
   public WebElement waitElementToBeClickable() {
-    return explicitWait.until(ExpectedConditions.elementToBeClickable(locator));
+    return explicitWait
+        .ignoring(StaleElementReferenceException.class)
+        .until(ExpectedConditions.elementToBeClickable(locator));
   }
 
   public Boolean waitElementAttributeTobe(String attribute, String value){
     return explicitWait.until(ExpectedConditions.attributeToBe(locator, attribute, value));
-  }
-
-  public Boolean waitStalenessOf(){
-    return explicitWait.until(ExpectedConditions.stalenessOf(getWrappedWebElement()));
   }
 
 }
