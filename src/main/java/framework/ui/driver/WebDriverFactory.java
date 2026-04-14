@@ -19,7 +19,6 @@ public class WebDriverFactory {
       default:
         throw new RuntimeException("Unsupported browser: " + browser);
     }
-    webDriver.manage().window().maximize();
     log.info("Current browser is {}. Screen resolution: {}",
         webDriver, webDriver.manage().window().getSize()
     );
@@ -30,7 +29,11 @@ public class WebDriverFactory {
     ChromeOptions options = new ChromeOptions();
     options.setExperimentalOption("excludeSwitches", List.of("enable-automation"));
     options.addArguments(
+        "--headless=new",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
         "--incognito",
+        "--window-size=1920,1080",
         "--disable-blink-features=AutomationControlled"
     );
     return options;
