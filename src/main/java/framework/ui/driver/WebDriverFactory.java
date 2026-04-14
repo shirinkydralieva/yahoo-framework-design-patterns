@@ -32,9 +32,9 @@ public class WebDriverFactory {
         "--headless=new",
         "--no-sandbox",
         "--disable-dev-shm-usage",
-        "--incognito",
         "--window-size=1920,1080",
-        "--disable-blink-features=AutomationControlled"
+        "--disable-blink-features=AutomationControlled",
+        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
     );
     return options;
   }
